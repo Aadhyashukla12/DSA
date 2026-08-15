@@ -1,6 +1,6 @@
 class Solution{
     public:
-    vector<vector<int>>levelOrder(TreeNode*root){
+    vector<vector<int>>levelOrder(TreeNode* root){
         vector<vector<int>>ans;
         if(root==NULL){
             return ans;
@@ -8,8 +8,8 @@ class Solution{
         queue<TreeNode*>q;
         q.push(root);
         while(!q.empty()){
-            int size=q.size();
             vector<int>level;
+            int size=q.size();
             for(int i=0;i<size;i++){
                 TreeNode* node=q.front();
                 q.pop();
@@ -20,6 +20,5 @@ class Solution{
             ans.push_back(level);
         }
         return ans;
-
     }
 };
